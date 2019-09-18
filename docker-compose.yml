@@ -1,0 +1,10 @@
+version: '3.7'
+services:
+  prime-numbers-service:
+    build: ./prime-numbers-service
+    ports:
+      - "8070:8080"
+  data-management-service:
+    build: ./data-management-service
+    ports:
+      - "8071:8080"
