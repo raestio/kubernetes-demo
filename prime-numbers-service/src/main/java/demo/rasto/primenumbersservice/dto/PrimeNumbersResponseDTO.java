@@ -13,7 +13,7 @@ import java.util.List;
 public class PrimeNumbersResponseDTO {
 
     @JsonProperty("primeNumbers")
-    List<Long> primeNumbers = new ArrayList<>();
+    private List<Long> primeNumbers = new ArrayList<>();
 
     @JsonProperty("timeSpentInMillis")
     private Long timeSpentInMillis;
