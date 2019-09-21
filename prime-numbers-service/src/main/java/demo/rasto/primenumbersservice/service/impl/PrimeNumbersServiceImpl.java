@@ -2,6 +2,7 @@ package demo.rasto.primenumbersservice.service.impl;
 
 import demo.rasto.primenumbersservice.dto.IsPrimeNumberResponseDTO;
 import demo.rasto.primenumbersservice.dto.PrimeNumbersResponseDTO;
+import demo.rasto.primenumbersservice.service.PrimeNumbersService;
 import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;

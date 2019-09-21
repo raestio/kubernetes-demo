@@ -1,4 +1,4 @@
-package demo.rasto.primenumbersservice.service.impl;
+package demo.rasto.primenumbersservice.service;
 
 
 import demo.rasto.primenumbersservice.dto.IsPrimeNumberResponseDTO;
