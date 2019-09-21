@@ -12,6 +12,7 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import javax.validation.Valid;
 import java.util.List;
 
 @RestController
@@ -22,7 +23,7 @@ public class DataManagementController {
     private DataManagementService dataManagementService;
 
     @PostMapping(value = "/prime-numbers-data", consumes = MediaType.APPLICATION_JSON_VALUE, produces = MediaType.APPLICATION_JSON_VALUE)
-    public ResponseEntity<PrimeNumberDataDTO> savePrimeNumberData(@RequestBody PrimeNumberDataDTO primeNumberInfo) {
+    public ResponseEntity<PrimeNumberDataDTO> savePrimeNumberData(@RequestBody @Valid PrimeNumberDataDTO primeNumberInfo) {
         PrimeNumberDataDTO dto = dataManagementService.savePrimeNumberData(primeNumberInfo);
         return ResponseEntity.ok(dto);
     }
