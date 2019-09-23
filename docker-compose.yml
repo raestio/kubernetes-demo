@@ -17,12 +17,20 @@ services:
       ME_CONFIG_MONGODB_ADMINUSERNAME: root
       ME_CONFIG_MONGODB_ADMINPASSWORD: example
   prime-numbers-service:
-    build: ./prime-numbers-service
+    build:
+      context: ./prime-numbers-service
+      cache_from:
+        - raestio/prime-numbers-service:latest
+    image: raestio/prime-numbers-service:latest
     restart: always
     ports:
       - 8070:8080
   data-management-service:
-    build: ./data-management-service
+    build:
+      context: ./data-management-service
+      cache_from:
+        - raestio/data-management-service:latest
+    image: raestio/data-management-service:latest
     restart: always
     ports:
       - 8071:8080

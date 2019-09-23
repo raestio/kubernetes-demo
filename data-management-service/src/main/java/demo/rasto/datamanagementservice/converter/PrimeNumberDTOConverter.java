@@ -5,9 +5,6 @@ import demo.rasto.datamanagementservice.entity.PrimeNumberData;
 import org.springframework.core.convert.converter.Converter;
 import org.springframework.stereotype.Component;
 
-/**
- * @author Rastislav Zlacky (rastislav.zlacky@inventi.cz) on 23.09.2019.
- */
 @Component
 public class PrimeNumberDTOConverter implements Converter<PrimeNumberDataDTO, PrimeNumberData> {
 

@@ -6,9 +6,7 @@ import lombok.Data;
 import java.util.ArrayList;
 import java.util.List;
 
-/**
- * @author Rastislav Zlacky (rastislav.zlacky@inventi.cz) on 18.09.2019.
- */
+
 @Data
 public class PrimeNumbersResponseDTO {
 

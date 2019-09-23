@@ -3,4 +3,4 @@ server:
 
 mongodb:
   database: prime_numbers_data
-  connectionString: mongodb://mongo:27017
+  connectionString: mongodb://root:example@mongo:27017
