@@ -34,3 +34,15 @@ services:
     restart: always
     ports:
       - 8071:8080
+  frontend-demo-app:
+    build:
+      context: ./frontend-demo-app
+      cache_from:
+        - raestio/frontend-demo-app:latest
+    image: raestio/frontend-demo-app:latest
+    restart: always
+    volumes:
+      - /app/node_modules
+      - ./frontend-demo-app:/app
+    ports:
+      - 8080:3000
