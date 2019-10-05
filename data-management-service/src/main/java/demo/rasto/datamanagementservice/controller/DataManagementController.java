@@ -16,7 +16,7 @@ import javax.validation.Valid;
 import java.util.List;
 
 @RestController
-@RequestMapping("/api/v1/data-management")
+@RequestMapping("/api/data-management")
 public class DataManagementController {
 
     @Autowired

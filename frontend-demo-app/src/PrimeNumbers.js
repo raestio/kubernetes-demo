@@ -14,21 +14,9 @@ class PrimeNumbers extends Component {
     }
 
     async fetchPrimes() {
-        //const values = await axios.get('http://localhost:8071/api/v1/data-management/prime-numbers-data');
-        const values = {
-            primeNumberInfos: [
-                {
-                    primeNumber: 5,
-                    timeSpentInMillis: 30
-                },
-                {
-                    primeNumber: 5,
-                    timeSpentInMillis: 30
-                }
-            ]
-        };
+        const promise = await axios.get('/api/data-management/prime-numbers-data');
         this.setState({
-            primeNumbersData: values.primeNumberInfos
+            primeNumbersData: promise.data.primeNumberInfos
         });
     }
 
@@ -54,14 +42,10 @@ class PrimeNumbers extends Component {
 
     handleSubmit = async (event) => {
         event.preventDefault();
-        //const result = await axios.get('http://localhost:8070/api/v1/prime-numbers/is-prime-number?number=' + this.state.numberToCheck);
-        const result = {
-            isPrimeNumber: true,
-            timeSpentInMillis: 500
-        };
+        const promise = await axios.get('/api/prime-numbers/is-prime-number?number=' + this.state.numberToCheck);
         this.setState({
-            isPrimeNumber: result.isPrimeNumber,
-            timeSpentInMillis: result.timeSpentInMillis
+            isPrimeNumber: promise.data.isPrimeNumber,
+            timeSpentInMillis: promise.data.timeSpentInMillis
         });
     };
 
