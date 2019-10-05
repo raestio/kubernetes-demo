@@ -37,12 +37,14 @@ services:
   frontend-demo-app:
     build:
       context: ./frontend-demo-app
+      dockerfile: Dockerfile.dev
       cache_from:
         - raestio/frontend-demo-app:latest
     image: raestio/frontend-demo-app:latest
     restart: always
     volumes:
-      - /app/node_modules
       - ./frontend-demo-app:/app
+      - /app/node_modules/
     ports:
       - 8080:80
+      - 3000:3000
