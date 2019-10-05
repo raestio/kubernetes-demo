@@ -36,7 +36,7 @@ services:
   frontend-demo-app:
     build:
       context: ./frontend-demo-app
-      dockerfile: Dockerfile.dev
+      dockerfile: Dockerfile
       cache_from:
         - raestio/frontend-demo-app:latest
     image: raestio/frontend-demo-app:latest
@@ -49,7 +49,7 @@ services:
   proxy:
     build:
       context: ./nginx
-      dockerfile: Dockerfile.dev
+      dockerfile: Dockerfile
     image: raestio/proxy:latest
     restart: always
     ports:
