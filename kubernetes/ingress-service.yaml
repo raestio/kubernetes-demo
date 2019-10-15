@@ -8,15 +8,15 @@ spec:
   rules:
     - http:
         paths:
-          - path: /?(.*)
+          - path: /
             backend:
               serviceName: frontend-demo-app-cluster-ip
               servicePort: 3000
-          - path: /api/prime-numbers/?(.*)
+          - path: /api/prime-numbers
             backend:
               serviceName: prime-numbers-service-cluster-ip
               servicePort: 8080
-          - path: /api/data-management/?(.*)
+          - path: /api/data-management
             backend:
               serviceName: data-management-service-cluster-ip
               servicePort: 8080
