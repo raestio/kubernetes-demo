@@ -1,0 +1,12 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: frontend-demo-app-pod
+  labels:
+    component: web
+spec:
+  containers:
+    - name: frontend-demo-app
+      image: raestio/frontend-demo-app
+      ports:
+        - containerPort: 3000

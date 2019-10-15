@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: prime-numbers-service-deployment
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      component: prime-numbers-service
+  template:
+    metadata:
+      labels:
+        component: prime-numbers-service
+    spec:
+      containers:
+        - name: prime-numbers-service
+          image: raestio/prime-numbers-service
+          ports:
+            - containerPort: 8080

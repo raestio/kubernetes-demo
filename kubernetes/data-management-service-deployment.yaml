@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: data-management-service-deployment
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      component: data-management
+  template:
+    metadata:
+      labels:
+        component: data-management
+    spec:
+      containers:
+        - name: data-management-service
+          image: raestio/data-management-service
+          ports:
+            - containerPort: 8080

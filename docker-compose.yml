@@ -48,7 +48,7 @@ services:
       - 3000
   proxy:
     build:
-      context: ./nginx
+      context: ./proxy
       dockerfile: Dockerfile
     image: raestio/proxy:latest
     restart: always

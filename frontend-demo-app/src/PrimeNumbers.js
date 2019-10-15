@@ -42,7 +42,7 @@ class PrimeNumbers extends Component {
 
     handleSubmit = async (event) => {
         event.preventDefault();
-        const promise = await axios.get('/api/prime-numbers/is-prime-number?number=' + this.state.numberToCheck);
+        const promise = await axios.get(`/api/prime-numbers/is-prime-number?number=${this.state.numberToCheck}`);
         this.setState({
             isPrimeNumber: promise.data.isPrimeNumber,
             timeSpentInMillis: promise.data.timeSpentInMillis
