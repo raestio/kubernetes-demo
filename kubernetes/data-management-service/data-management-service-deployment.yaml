@@ -6,11 +6,11 @@ spec:
   replicas: 1
   selector:
     matchLabels:
-      component: data-management
+      component: data-management-service
   template:
     metadata:
       labels:
-        component: data-management
+        component: data-management-service
     spec:
       containers:
         - name: data-management-service

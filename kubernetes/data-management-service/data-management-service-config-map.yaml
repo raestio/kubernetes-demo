@@ -1,0 +1,11 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: data-management-service-config-map
+data:
+  application.yaml: |-
+    server:
+      port: 8080
+    mongodb:
+      database: prime_numbers_data
+      connectionString: mongodb://root:example@mongo-cluster-ip:27017

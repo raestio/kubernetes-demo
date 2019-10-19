@@ -1,0 +1,6 @@
+spring:
+  cloud:
+    kubernetes:
+      config:
+        name: prime-numbers-service-service-config-map
+        namespace: default

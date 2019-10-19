@@ -1,6 +1,0 @@
-server:
-  port: 8080
-
-mongodb:
-  database: prime_numbers_data
-  connectionString: mongodb://root:example@mongo:27017
