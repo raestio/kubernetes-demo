@@ -47,6 +47,8 @@ class PrimeNumbers extends Component {
             isPrimeNumber: promise.data.isPrimeNumber,
             timeSpentInMillis: promise.data.timeSpentInMillis
         });
+        axios.post('/api/data-management/prime-numbers-data', ({ primeNumber: this.state.numberToCheck, timeSpentInMillis: promise.data.timeSpentInMillis }));
+        this.state.primeNumbersData.push(({ primeNumber: parseInt(this.state.numberToCheck), timeSpentInMillis: promise.data.timeSpentInMillis }));
     };
 
     render() {
@@ -66,7 +68,9 @@ class PrimeNumbers extends Component {
                 </div>
 
                 <h3>Prime numbers data:</h3>
-                {this.renderPrimesData()}
+                <div>
+                    {this.renderPrimesData()}
+                </div>
             </div>
         );
     }
